@@ -17,12 +17,12 @@ app.get('/', (req, res) => res.send('Hello World!'));
 
 app.post('/supporters', validateState, validateAge, validateEmail, validateCity, validateName, (req, res) => {
 	const { data, body } = req;
-	const { name, city, state, email, age } = body;
+	const { name, city, state, email, age, nick } = body;
 	const id = data.length + 1;
-	data.push({ id, name, city, state, email, age });
+	data.push({ id, name, city, state, email, age, nick });
 	fs.writeFile(SUPPORTER, JSON.stringify(data))
 		.then(() => {
-			res.status(201).json({ id, name, city, state, email, age });
+			res.status(201).json({ id, name, city, state, email, age, nick });
 		})
 		.catch((err) => {
 			res.status(400).json({ message: `Erro ao escrever o arquivo: ${err.message}` });
