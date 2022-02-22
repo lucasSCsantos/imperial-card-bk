@@ -18,7 +18,7 @@ app.get('/', (req, res) => res.send('Hello World!'));
 app.post('/supporters', validateState, validateAge, validateEmail, validateCity, validateName, (req, res) => {
 	const { data, body } = req;
 	const { name, city, state, email, age, nick } = body;
-	const id = data.length + 1;
+	const id = data.length;
 	data.push({ id, name, city, state, email, age, nick });
 	fs.writeFile(SUPPORTER, JSON.stringify(data))
 		.then(() => {
