@@ -28,14 +28,20 @@ const validateEmail = (req, res, next) => {
 };
 
 const validateName = (req, res, next) => {
-  const { name } = req.body;
+  const { name, nick } = req.body;
   if (!name || name === '') {
     return res.status(400).json({
       message: 'O campo "name" é obrigatório',
     });
   }
 
-  if (name.length < 3) {
+  if (!nick || nick === '') {
+    return res.status(400).json({
+      message: 'O campo "nick" é obrigatório',
+    });
+  }
+
+  if (name.length < 2) {
     return res.status(400).json({
       message: 'O "name" deve ter pelo menos 3 caracteres',
     });
