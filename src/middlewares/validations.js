@@ -1,5 +1,3 @@
-const isEmptyObject = (object) => (Object.values(object).length <= 0);
-
 const validateEmail = (req, res, next) => {
   const { email } = req.body;
 	const { data } = req;
