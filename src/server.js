@@ -33,7 +33,7 @@ app.get('/partida', (req, res) => {
 				link: "https://player.twitch.tv/?channel=gaules&autoplay=true&parent=www.hltv.org"
 			},
 			{
-				name: "ale_apoka",
+				name: "Apoka",
 				link: "https://player.twitch.tv/?channel=ale_apoka&autoplay=true&parent=www.hltv.org"
 			},
 		]
