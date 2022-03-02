@@ -1,47 +1,43 @@
 const express = require('express');
-const fs = require('fs').promises;
 const bodyParser = require('body-parser');
-const getSupportersMiddleware = require('./middlewares/getSupporters');
-const { validateState, validateAge, validateEmail, validateCity, validateName } = require('./middlewares/validations');
 const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 3000 ;
-const SUPPORTER = 'src/supporters.json';
 
 app.use(cors())
 app.use(bodyParser.json());
-app.use(getSupportersMiddleware);
 
 app.get('/', (req, res) => res.send('Hello World!'));
 
-app.post('/supporters', validateState, validateAge, validateEmail, validateCity, validateName, (req, res) => {
-	const { data, body } = req;
-	const { name, city, state, email, age, nick } = body;
-	const id = data.length;
-	data.push({ id, name, city, state, email, age, nick });
-	fs.writeFile(SUPPORTER, JSON.stringify(data))
-		.then(() => {
-			res.status(201).json({ id, name, city, state, email, age, nick });
-		})
-		.catch((err) => {
-			res.status(400).json({ message: `Erro ao escrever o arquivo: ${err.message}` });
-		});
+app.get('/partida', (req, res) => {
+	res.json({
+		date: 1646334000000,
+		team1: {
+			logo: 'https://api-v3.draft5.gg/teams/743/logo',
+			name: 'Imperial'
+		},
+		team2: {
+			logo: 'https://www.hltv.org/img/static/team/placeholder.svg',
+			name: 'Indefinido'
+		},
+		format: {
+			type: 'bo1'
+		},
+		event: {
+			name: 'PGL Major Antwerp 2022: American RMR - South American Open Qualifier #1'
+		},
+		streams: [
+			{
+				name: "Gaules",
+				link: "https://player.twitch.tv/?channel=gaules&autoplay=true&parent=www.hltv.org"
+			},
+			{
+				name: "ale_apoka",
+				link: "https://player.twitch.tv/?channel=ale_apoka&autoplay=true&parent=www.hltv.org"
+			},
+		]
+	})
 });
-
-app.get('/supporters', (req, res) => {
-	const { data } = req;
-	res.status(200).json(data)
-})
-
-app.get('/supporters/search', (req, res) => {
-	const { data } = req;
-	const { email } = req.query;
-	const supporter = data.find((fan) => fan.email === email);
-	if (supporter) {
-		return res.status(200).json(supporter);
-	}
-	res.status(404).json({ message: "Supporter não existe" })
-})
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
