@@ -19,7 +19,7 @@ app.get('/partida', (req, res) => {
 		},
 		team2: {
 			logo: 'https://www.hltv.org/img/static/team/placeholder.svg',
-			name: 'Indefinido'
+			name: 'A definir'
 		},
 		format: {
 			type: 'bo1'
@@ -30,11 +30,19 @@ app.get('/partida', (req, res) => {
 		streams: [
 			{
 				name: "Gaules",
-				link: "https://player.twitch.tv/?channel=gaules&autoplay=true&parent=www.hltv.org"
+				link: "https://player.twitch.tv/?channel=gaules&autoplay=true"
 			},
 			{
 				name: "Apoka",
 				link: "https://player.twitch.tv/?channel=ale_apoka&autoplay=true&parent=www.hltv.org"
+			},
+			{
+				name: "BT0",
+				link: "https://player.twitch.tv/?channel=bt0tv&autoplay=true&parent=www.hltv.org"
+			},
+			{
+				name: "MCH",
+				link: "https://player.twitch.tv/?channel=mch_agg&autoplay=true&parent=www.hltv.org"
 			},
 		]
 	})
