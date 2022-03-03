@@ -12,14 +12,14 @@ app.get('/', (req, res) => res.send('Hello World!'));
 
 app.get('/partida', (req, res) => {
 	res.json({
-		date: 'Indeterminada',
+		// date: 'Indeterminada', //se for ao vivo tira o date
 		team1: {
 			logo: 'https://api-v3.draft5.gg/teams/743/logo',
 			name: 'Imperial'
 		},
 		team2: {
 			logo: 'https://www.hltv.org/img/static/team/placeholder.svg',
-			name: 'A definir'
+			name: 'LAUNDO E AMIGOS'
 		},
 		format: {
 			type: 'bo1'
