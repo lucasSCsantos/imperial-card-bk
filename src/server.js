@@ -18,8 +18,8 @@ app.get('/partida', (req, res) => {
 			name: 'Imperial'
 		},
 		team2: {
-			logo: 'https://distribution.faceit-cdn.net/images/685757ba-6638-45c7-849e-af7cb6b9f0a2.jpeg',
-			name: 'Immitis'
+			logo: 'https://distribution.faceit-cdn.net/images/8d278bb0-b45b-4aed-8021-fe577ad5de79.jpeg',
+			name: 'BENEATH VBET'
 		},
 		format: {
 			type: 'bo1'
