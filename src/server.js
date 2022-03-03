@@ -12,14 +12,14 @@ app.get('/', (req, res) => res.send('Hello World!'));
 
 app.get('/partida', (req, res) => {
 	res.json({
-		// date: 'Indeterminada', //se for ao vivo tira o date
+		date: 1646420400000,
 		team1: {
 			logo: 'https://api-v3.draft5.gg/teams/743/logo',
 			name: 'Imperial'
 		},
 		team2: {
-			logo: 'https://distribution.faceit-cdn.net/images/8d278bb0-b45b-4aed-8021-fe577ad5de79.jpeg',
-			name: 'BENEATH VBET'
+			logo: 'https://www.hltv.org/img/static/team/placeholder.svg',
+			name: 'A definir'
 		},
 		format: {
 			type: 'bo1'
@@ -36,10 +36,10 @@ app.get('/partida', (req, res) => {
 				name: "Apoka",
 				link: "https://player.twitch.tv/?channel=ale_apoka&autoplay=true&parent=www.hltv.org"
 			},
-			// {
-			// 	name: "BT0",
-			// 	link: "https://player.twitch.tv/?channel=bt0tv&autoplay=true&parent=www.hltv.org"
-			// },
+			{
+				name: "BT0",
+				link: "https://player.twitch.tv/?channel=bt0tv&autoplay=true&parent=www.hltv.org"
+			},
 			{
 				name: "MCH",
 				link: "https://player.twitch.tv/?channel=mch_agg&autoplay=true&parent=www.hltv.org"
