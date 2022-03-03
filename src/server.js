@@ -18,8 +18,8 @@ app.get('/partida', (req, res) => {
 			name: 'Imperial'
 		},
 		team2: {
-			logo: 'https://www.hltv.org/img/static/team/placeholder.svg',
-			name: 'MareaTurbo TEAM'
+			logo: 'https://distribution.faceit-cdn.net/images/685757ba-6638-45c7-849e-af7cb6b9f0a2.jpeg',
+			name: 'Immitis'
 		},
 		format: {
 			type: 'bo1'
