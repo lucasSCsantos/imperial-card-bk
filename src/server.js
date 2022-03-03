@@ -19,7 +19,7 @@ app.get('/partida', (req, res) => {
 		},
 		team2: {
 			logo: 'https://www.hltv.org/img/static/team/placeholder.svg',
-			name: 'LAUNDO E AMIGOS'
+			name: 'MareaTurboTeam'
 		},
 		format: {
 			type: 'bo1'
