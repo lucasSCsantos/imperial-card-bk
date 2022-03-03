@@ -12,7 +12,7 @@ app.get('/', (req, res) => res.send('Hello World!'));
 
 app.get('/partida', (req, res) => {
 	res.json({
-		date: 1646334000000,
+		date: 'Indeterminada',
 		team1: {
 			logo: 'https://api-v3.draft5.gg/teams/743/logo',
 			name: 'Imperial'
