@@ -12,7 +12,7 @@ app.get('/', (req, res) => res.send('Hello World!'));
 
 app.get('/partida', (req, res) => {
 	res.json({
-		date: 1646420400000,
+		date: 'Indeterminada',
 		team1: {
 			logo: 'https://api-v3.draft5.gg/teams/743/logo',
 			name: 'Imperial'
@@ -36,14 +36,14 @@ app.get('/partida', (req, res) => {
 				name: "Apoka",
 				link: "https://player.twitch.tv/?channel=ale_apoka&autoplay=true&parent=www.hltv.org"
 			},
-			{
-				name: "BT0",
-				link: "https://player.twitch.tv/?channel=bt0tv&autoplay=true&parent=www.hltv.org"
-			},
-			{
-				name: "MCH",
-				link: "https://player.twitch.tv/?channel=mch_agg&autoplay=true&parent=www.hltv.org"
-			},
+			// {
+			// 	name: "BT0",
+			// 	link: "https://player.twitch.tv/?channel=bt0tv&autoplay=true&parent=www.hltv.org"
+			// },
+			// {
+			// 	name: "MCH",
+			// 	link: "https://player.twitch.tv/?channel=mch_agg&autoplay=true&parent=www.hltv.org"
+			// },
 		]
 	})
 });
