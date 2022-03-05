@@ -22,7 +22,7 @@ app.get('/partida', (req, res) => {
 			name: 'A definir'
 		},
 		format: {
-			type: '???'
+			type: 'bo1'
 		},
 		event: {
 			name: 'FiReLEAGUE Latin Power Spring 2022 - BLAST Premier Qualifier'
