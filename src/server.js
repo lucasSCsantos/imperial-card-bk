@@ -22,11 +22,11 @@ app.get('/partida', (req, res) => {
 			name: 'A definir'
 		},
 		format: {
-			type: 'bo1'
+			type: '???'
 		},
-		// event: {
-		// 	name: 'PGL Major Antwerp 2022: American RMR - South American Open Qualifier #1'
-		// },
+		event: {
+			name: 'FiReLEAGUE Latin Power Spring 2022 - BLAST Premier Qualifier'
+		},
 		// streams: [
 		// 	{
 		// 		name: "Gaules",
