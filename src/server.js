@@ -24,18 +24,18 @@ app.get('/partida', (req, res) => {
 		format: {
 			type: 'bo1'
 		},
-		event: {
-			name: 'PGL Major Antwerp 2022: American RMR - South American Open Qualifier #1'
-		},
-		streams: [
-			{
-				name: "Gaules",
-				link: "https://player.twitch.tv/?channel=gaules&autoplay=true&parent=www.hltv.org"
-			},
-			{
-				name: "Apoka",
-				link: "https://player.twitch.tv/?channel=ale_apoka&autoplay=true&parent=www.hltv.org"
-			},
+		// event: {
+		// 	name: 'PGL Major Antwerp 2022: American RMR - South American Open Qualifier #1'
+		// },
+		// streams: [
+		// 	{
+		// 		name: "Gaules",
+		// 		link: "https://player.twitch.tv/?channel=gaules&autoplay=true&parent=www.hltv.org"
+		// 	},
+		// 	{
+		// 		name: "Apoka",
+		// 		link: "https://player.twitch.tv/?channel=ale_apoka&autoplay=true&parent=www.hltv.org"
+		// 	},
 			// {
 			// 	name: "BT0",
 			// 	link: "https://player.twitch.tv/?channel=bt0tv&autoplay=true&parent=www.hltv.org"
@@ -44,7 +44,7 @@ app.get('/partida', (req, res) => {
 			// 	name: "MCH",
 			// 	link: "https://player.twitch.tv/?channel=mch_agg&autoplay=true&parent=www.hltv.org"
 			// },
-		]
+		// ]
 	})
 });
 
