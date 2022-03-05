@@ -27,15 +27,15 @@ app.get('/partida', (req, res) => {
 		event: {
 			name: 'FiReLEAGUE Latin Power Spring 2022 - BLAST Premier Qualifier'
 		},
-		// streams: [
-		// 	{
-		// 		name: "Gaules",
-		// 		link: "https://player.twitch.tv/?channel=gaules&autoplay=true&parent=www.hltv.org"
-		// 	},
-		// 	{
-		// 		name: "Apoka",
-		// 		link: "https://player.twitch.tv/?channel=ale_apoka&autoplay=true&parent=www.hltv.org"
-		// 	},
+		streams: [
+			{
+				name: "Gaules",
+				link: "https://player.twitch.tv/?channel=gaules&autoplay=true&parent=www.hltv.org"
+			},
+			{
+				name: "Apoka",
+				link: "https://player.twitch.tv/?channel=ale_apoka&autoplay=true&parent=www.hltv.org"
+			},
 			// {
 			// 	name: "BT0",
 			// 	link: "https://player.twitch.tv/?channel=bt0tv&autoplay=true&parent=www.hltv.org"
@@ -44,7 +44,7 @@ app.get('/partida', (req, res) => {
 			// 	name: "MCH",
 			// 	link: "https://player.twitch.tv/?channel=mch_agg&autoplay=true&parent=www.hltv.org"
 			// },
-		// ]
+		]
 	})
 });
 
