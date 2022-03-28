@@ -25,7 +25,7 @@ app.get('/partida', (req, res) => {
 			type: 'bo1'
 		},
 		event: {
-			name: 'FiReLEAGUE Latin Power Spring 2022 - BLAST Premier Qualifier'
+			name: 'Nenhum evento próximo'
 		},
 		streams: [
 			{
